@@ -71,21 +71,6 @@ flowchart TD
     B5 -->|"E-mail com link"| F3
 ```
 
-### Algoritmo de Match Ponderado
-
-O score de compatibilidade entre um aprendiz e uma vaga é calculado em tempo real pela seguinte fórmula:
-
-$$\text{Score} = \frac{\sum_{i=1}^{n} \left( \text{nota\_aluno}[i] \times \text{peso\_gestor}[i] \right)}{\sum_{i=1}^{n} \left( 10 \times \text{peso\_gestor}[i] \right)} \times 100$$
-
-**Onde:**
-- $\text{nota\_aluno}[i]$ → nota do aprendiz na competência $i$, consumida sob demanda da API WEG (escala 0–10)
-- $\text{peso\_gestor}[i]$ → peso atribuído pelo gestor ao requisito $i$ no momento de criação da vaga (escala 0–10)
-- $n$ → número total de competências avaliadas na vaga
-
-O denominador garante a normalização: mesmo que o gestor valorize apenas um subconjunto de competências, o score sempre será relativo ao máximo atingível dado aquela configuração de pesos, resultando numa escala padronizada de **0 a 100**.
-
----
-
 ## Matriz de Funcionalidades
 
 ### 👔 Gestor
